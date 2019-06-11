@@ -103,10 +103,10 @@ public class LabelResource {
         return ResponseUtil.wrapOrNotFound(label);
     }
 
-//    @GetMapping("/teste")
-//    public ResponseEntity<String> teste() {
-//        return ResponseEntity.ok().body("OK!");
-//    }
+    @GetMapping("/teste")
+    public ResponseEntity<String> teste() {
+        return ResponseEntity.ok().body("OK!");
+    }
 
     /**
      * {@code DELETE  /labels/:id} : delete the "id" label.
