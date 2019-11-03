@@ -1,0 +1,29 @@
+entity Evento {
+	String nomeDoEvento;
+    String descricao;
+    LocalDate dataCadastro;
+    LocalDate dataDoEvento;
+    String endereco;
+}
+
+entity Ingresso {
+	String codigoReferencia;
+    
+}
+
+entity Usuario {
+	String nome
+    LocalDate dataNascimento
+    String cpf
+}
+
+relationship ManyToMany {
+  Ingresso{ingresso(idEvento)} to Evento{idIngresso}
+}
+
+relationship OneToOne {
+	Ingresso{ingresso(id)} to Usuario{idIngresso}
+}
+
+paginate Evento with infinite-scroll
+paginate Ingresso with pagination
